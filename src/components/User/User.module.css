@@ -4,12 +4,13 @@ select{
     border-right:5px solid transparent ;
     border-radius: 5px;
     background-color: aliceblue;
-    width: 70%;
+    width: 110px;
     padding: 10px;
+    cursor: pointer;
 }
 
 #active{
-    color: rgb(35, 192, 75);
+    color: rgb(22, 160, 56);
     font-weight: bold;
 }
 #owner{
