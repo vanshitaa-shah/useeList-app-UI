@@ -1,0 +1,17 @@
+select{
+    border: none;
+    outline: 1px solid #d1d5db;
+    border-right:5px solid transparent ;
+    border-radius: 5px;
+    background-color: aliceblue;
+    width: 70%;
+    padding: 10px;
+}
+
+#active{
+    color: rgb(35, 192, 75);
+    font-weight: bold;
+}
+#owner{
+    font-weight: bold;
+}
