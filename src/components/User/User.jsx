@@ -2,12 +2,21 @@ import React from 'react'
 import UserProfile from '../UserProfile/UserProfile'
 import UserStyle from './User.module.css'
 import { Trash2, Lock } from 'react-feather'
+import { hoverActions,cardActions} from '../../store'
+import { useDispatch } from 'react-redux'
 const User = ({ userInfo }) => {
-    console.log(userInfo.status);
+    const dispatch = useDispatch();
+    const showCardHandler = () => {
+        dispatch(hoverActions.toggleCard())
+        dispatch(cardActions.showCard(userInfo))
+    }
+    const hideClassHandler = () => {
+        dispatch(hoverActions.toggleCard())
+    }
     return (
         <tr>
             <td colSpan={2}>
-                <UserProfile profileInfo={userInfo} />
+                <UserProfile profileInfo={userInfo} showCard={showCardHandler} hideCard={hideClassHandler} />
             </td>
             {
                 userInfo.access === 'owner'
