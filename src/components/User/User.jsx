@@ -2,7 +2,8 @@ import React from 'react'
 import UserProfile from '../UserProfile/UserProfile'
 import UserStyle from './User.module.css'
 import { Trash2, Lock } from 'react-feather'
-import { hoverActions,cardActions} from '../../store'
+import { hoverActions} from '../../store/hoverSlice'
+import { cardActions} from '../../store/cardSlice'
 import { useDispatch } from 'react-redux'
 const User = ({ userInfo }) => {
     const dispatch = useDispatch();
