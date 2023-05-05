@@ -10,6 +10,8 @@ import { useRef } from 'react'
 const User = ({ userInfo }) => {
     const dispatch = useDispatch();
     const statusValue=useRef();
+
+    // Logic for showing and hiding of the card
     const showCardHandler = () => {
         if(statusValue.current){
             userInfo={...userInfo,status:statusValue.current.value}
@@ -17,7 +19,7 @@ const User = ({ userInfo }) => {
         dispatch(hoverActions.toggleCard())
         dispatch(cardActions.showCard(userInfo))
     }
-    const hideClassHandler = () => {
+    const hideCardHandler = () => {
         dispatch(hoverActions.toggleCard())
     }
 
@@ -28,7 +30,7 @@ const User = ({ userInfo }) => {
     return (
         <tr>
             <td colSpan={2}>
-                <UserProfile profileInfo={userInfo} showCard={showCardHandler} hideCard={hideClassHandler} />
+                <UserProfile profileInfo={userInfo} showCard={showCardHandler} hideCard={hideCardHandler} />
             </td>
             {
                 userInfo.access === 'owner'
@@ -59,4 +61,4 @@ const User = ({ userInfo }) => {
     )
 }
 
-export default User
+export default User;

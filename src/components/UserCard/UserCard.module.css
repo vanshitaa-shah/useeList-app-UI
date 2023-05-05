@@ -1,5 +1,4 @@
 .cardContainer {
-  width: 30%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -14,12 +13,14 @@
   padding: 35px 15px;
   width: 300px;
   font-weight: bold;
+  background-color: white;
 }
 .cardContent > * {
   margin: 5px;
 }
 .cardContent img {
   border-radius: 50%;
+  -webkit-user-drag: none;
 }
 
 .cardContent button {
@@ -95,7 +96,6 @@ sup {
 
 @media screen and (max-width: 1200px) {
   .cardContainer {
-    width: 50%;
     justify-content: flex-end;
     margin-right: 20px;
   }
@@ -106,5 +106,13 @@ sup {
   }
   .cardContent {
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cardContainer {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
   }
 }
