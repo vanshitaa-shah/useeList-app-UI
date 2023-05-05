@@ -1,88 +1,110 @@
-.cardContainer{
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content:flex-start ;
+.cardContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.cardContent{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 24px 107px -36px #00000054;
-    border-radius: 2.9rem;
-    padding: 35px 15px;
-    width: 300px;
-    font-weight: bold;
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 24px 107px -36px #00000054;
+  border-radius: 2.9rem;
+  padding: 35px 15px;
+  width: 300px;
+  font-weight: bold;
 }
-.cardContent>*{
-    margin: 5px;
+.cardContent > * {
+  margin: 5px;
 }
-.cardContent img{
-    border-radius: 50%;
-}
-
-.cardContent button{
-    background-color: orange;
-    padding: 10px 15px;
-    width: 180px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.middleSection{
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0px;
-    width: 90%;
+.cardContent img {
+  border-radius: 50%;
 }
 
-.bottomSection{
-    display: flex;
+.cardContent button {
+  background-color: orange;
+  padding: 10px 15px;
+  width: 180px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.middleSection {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+  width: 90%;
 }
 
-.bottomSection div:first-child{
-    border-right:1px solid rgb(180, 180, 180);
+.bottomSection {
+  display: flex;
 }
 
-.bottomSection div{
-    padding: 0px 15px;
-}
-.bottomSection span{
-    font-size: 1.5rem;
-}
-.bottomSection p{
-    font-size: 0.8rem;
+.bottomSection div:first-child {
+  border-right: 1px solid rgb(180, 180, 180);
 }
 
-.secondaryColor{
-    font-weight: normal;
-    color: grey;
+.bottomSection div {
+  padding: 0px 15px;
+}
+.bottomSection span {
+  font-size: 1.5rem;
+}
+.bottomSection p {
+  font-size: 0.8rem;
 }
 
-.progressBar{
+.secondaryColor {
+  font-weight: normal;
+  color: grey;
+}
+
+.progressBar {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.progressBar::-webkit-progress-value {
+  background-color: orange;
+}
+
+.progressBar::-webkit-progress-bar {
+  background-color: rgba(243, 177, 90, 0.5);
+}
+.name {
+  position: relative;
+}
+sup {
+  font-size: 2.5rem;
+  position: absolute;
+  top: -130.5%;
+}
+
+#active {
+  color: green;
+}
+#inactive {
+  color: rgb(241, 81, 81);
+}
+
+@media screen and (max-width: 1200px) {
+  .cardContainer {
+    width: 50%;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cardContainer {
     width: 100%;
-    height: 10px;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.progressBar::-webkit-progress-value{
-    background-color: orange;
-}
-
-.progressBar::-webkit-progress-bar{
-    background-color: rgba(243, 177, 90, 0.5);
-}
-.name{
-    position: relative;
-}
-sup{
-    font-size: 2.5rem;
-    color: green;
-    position: absolute;
-    top: -130.5%;
+  }
+  .cardContent {
+    margin: 0 auto;
+  }
 }

@@ -4,7 +4,7 @@ const users = [
         name: 'John Doe',
         profileImg: 'https://randomuser.me/api/portraits/women/2.jpg',
         email: 'john.doe@example.com',
-        status: 1,
+        status: 'active',
         access: 'owner'
     },
     {
@@ -12,7 +12,7 @@ const users = [
         name: 'Jane Doe',
         profileImg: 'https://randomuser.me/api/portraits/men/1.jpg',
         email: 'jane.doe@example.com',
-        status: 0,
+        status: 'inactive',
         access: 'read'
     },
     {
@@ -20,7 +20,7 @@ const users = [
         name: 'Bob Smith',
         profileImg: 'https://randomuser.me/api/portraits/men/3.jpg',
         email: 'bob.smith@example.com',
-        status: 1,
+        status: 'active',
         access: 'read'
     },
     {
@@ -28,7 +28,7 @@ const users = [
         name: 'Alice Johnson',
         profileImg: 'https://randomuser.me/api/portraits/women/19.jpg',
         email: 'alice.johnson@example.com',
-        status: 0,
+        status: 'inactive',
         access: 'manager'
     },
     {
@@ -36,7 +36,7 @@ const users = [
         name: 'Tom Lee',
         profileImg: 'https://randomuser.me/api/portraits/men/13.jpg',
         email: 'tom.lee@example.com',
-        status: 1,
+        status: 'active',
         access: 'read'
     },
     {
@@ -44,7 +44,7 @@ const users = [
         name: 'Mary Brown',
         profileImg: 'https://randomuser.me/api/portraits/men/30.jpg',
         email: 'mary.brown@example.com',
-        status: 0,
+        status: 'inactive',
         access: 'manager'
     },
     {
@@ -52,7 +52,7 @@ const users = [
         name: 'David Wilson',
         profileImg: 'https://randomuser.me/api/portraits/women/21.jpg',
         email: 'david.wilson@example.com',
-        status: 1,
+        status: 'active',
         access: 'read'
     },
     {
@@ -60,7 +60,7 @@ const users = [
         name: 'Lisa Taylor',
         profileImg: 'https://randomuser.me/api/portraits/men/11.jpg',
         email: 'lisa.taylor@example.com',
-        status: 0,
+        status: 'inactive',
         access: 'read'
     }
 ];
