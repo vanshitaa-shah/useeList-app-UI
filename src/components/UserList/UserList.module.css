@@ -1,23 +1,39 @@
-.listContainer{
-    width: 70%;
-}
-table{
-    width: 100%;
+.listContainer {
+  width: 70%;
+  overflow: auto;
 }
 
-thead,tbody{
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-    text-align: left;
+thead,
+tbody {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  text-align: left;
 }
-th,td{
-    padding: 0.8rem;
+th,
+td {
+  padding: 0.8rem;
 }
-th{
-    font-size: 1.2rem;
+th {
+  font-size: 1.2rem;
 }
 
-tbody img{
-    border-radius: 50%;
+tbody img {
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .listContainer {
+    width: 100%;
+  }
+  table {
+    width: 800px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .listContainer {
+    height: 300px;
+    width: 100%;
+  }
 }
