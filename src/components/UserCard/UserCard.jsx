@@ -5,13 +5,19 @@ import CardStyle from './UserCard.module.css'
 const UserCard = () => {
     const showCard = useSelector(state => state.hover.isHover);
     const cardData=useSelector(state=>state.card)
+
+    //Conditional rendering
+    // Showing card only when showCard(state.hover.ishover) is true
     return (
         <>
             {showCard &&
                 <div className={CardStyle.cardContainer}>
                     <div className={CardStyle.cardContent}>
+
                         <img src={cardData.profileImg} alt="" width={100} />
-                        <span className={CardStyle.name}>{cardData.name} <sup id={cardData.status==='active'?CardStyle.active:CardStyle.inactive}>.</sup></span>
+                        <span className={CardStyle.name}>{cardData.name} 
+                            <sup id={cardData.status==='active'?CardStyle.active:CardStyle.inactive}>.</sup>
+                        </span>
                         <span className={CardStyle.secondaryColor}>{cardData.email}</span>
                         <span>Your Plan: Standard</span>
                         <button>{cardData.status==='active'?'Active':'Inactive'} User</button>
