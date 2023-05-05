@@ -4,16 +4,27 @@ import UserStyle from './User.module.css'
 import { Trash2, Lock } from 'react-feather'
 import { hoverActions} from '../../store/hoverSlice'
 import { cardActions} from '../../store/cardSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch , useSelector} from 'react-redux'
+import { useRef } from 'react'
+
 const User = ({ userInfo }) => {
     const dispatch = useDispatch();
+    const statusValue=useRef();
     const showCardHandler = () => {
+        if(statusValue.current){
+            userInfo={...userInfo,status:statusValue.current.value}
+        }
         dispatch(hoverActions.toggleCard())
         dispatch(cardActions.showCard(userInfo))
     }
     const hideClassHandler = () => {
         dispatch(hoverActions.toggleCard())
     }
+
+    const toggleStatus=(e)=>{
+        dispatch(cardActions.toggleStatus(e.target.value))
+    }
+
     return (
         <tr>
             <td colSpan={2}>
@@ -28,7 +39,7 @@ const User = ({ userInfo }) => {
                     </>
                     : <>
                         <td>
-                            <select name="status" defaultValue={userInfo.status ? 'active' : 'inactive'} >
+                            <select name="status" defaultValue={userInfo.status} onChange={toggleStatus} ref={statusValue}>
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
                             </select>
