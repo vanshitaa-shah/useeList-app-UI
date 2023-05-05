@@ -1,5 +1,5 @@
 .listContainer {
-  width: 70%;
+  width: 95%;
   overflow: auto;
 }
 
@@ -20,6 +20,7 @@ th {
 
 tbody img {
   border-radius: 50%;
+  -webkit-user-drag: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -33,7 +34,7 @@ tbody img {
 
 @media screen and (max-width: 768px) {
   .listContainer {
-    height: 300px;
+    height: 225px;
     width: 100%;
   }
 }
